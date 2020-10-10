@@ -1,0 +1,85 @@
+.listMenu {
+  border: 2px solid #f8f8f8;
+  border-bottom: none;
+  overflow-y: scroll;
+  max-height: 450px;
+
+  &_top {
+    background-color: #f8f8f8;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &_categories {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-style: normal;
+      font-weight: 500;
+
+      div {
+        width: 50%;
+        text-align: center;
+        padding: 20px 0 12px;
+        cursor: pointer;
+
+        &.active {
+          border-bottom: 1px solid #00b533;
+        }
+
+        span {
+          transform: translate(10px, -10px);
+          border-radius: 50%;
+          padding: 5px;
+        }
+      }
+    }
+
+    &_search {
+      position: relative;
+      padding: 5px 0;
+
+      &_input {
+        background-color: transparent;
+        font-size: 14px;
+        font-style: normal;
+        border: none;
+        padding: 1rem 48px;
+        color: #000;
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+          background-color: transparent;
+        }
+
+        &::placeholder {
+            color: #000;
+        }
+      }
+
+      div {
+        position: absolute;
+        font-size: 14px;
+        top: 12px;
+        margin-left: 10px;
+        cursor: pointer;
+
+        &:last-child {
+          right: 25.5px;
+        }
+      }
+    }
+  }
+
+  &_users {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}

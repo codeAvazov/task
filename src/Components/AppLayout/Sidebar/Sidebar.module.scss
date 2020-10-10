@@ -1,0 +1,132 @@
+@mixin makeToggle() {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  position: absolute;
+  display: none;
+  background-color: #F8F8F8;
+  cursor: pointer;
+}
+
+.sidebar {
+  max-width: 300px;
+  margin-top: 44px;
+  width: 20%;
+  padding: 0 55px;
+  overflow-y: scroll;
+  transition: 0.4s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  @media screen and (max-width: 760px) {
+    padding-top: 20px;
+    margin-top: 0;
+    background-color: #fff;
+    height: 100%;
+    width: 50%;
+    left: -100%;
+    top: 0;
+    font-size: 14px;
+  }
+
+  &.open {
+    @media screen and (max-width: 760px) {
+      left: 0;
+    }
+  }
+
+  &_close {
+    @include makeToggle();
+
+    @media screen and (max-width: 760px) {
+      display: flex;
+      top: 28px;
+      right: 10px;
+    }
+  }
+
+  &_open {
+    @include makeToggle();
+    opacity: 0;
+
+    @media screen and (max-width: 760px) {
+      opacity: 1;
+      display: flex;
+      position: fixed;
+      top: 28px;
+      left: 20px;
+    }
+  }
+
+  &_logo {
+    img {
+      width: 155.4px;
+      height: 42px;
+
+      @media screen and (max-width: 760px) {
+        width: 120px;
+        height: 40px;
+      }
+    }
+  }
+
+  &_menu {
+    list-style: none;
+    margin-top: 50%;
+    margin-bottom: 0;
+
+    &_item {
+      margin: 30px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &_link {
+        color: #b3b3b3;
+        font-style: normal;
+        font-weight: 500;
+
+        &:hover {
+          text-decoration: none;
+          color: #262626;
+
+          i {
+            color: #00b533;
+          }
+        }
+
+        &_icon {
+          margin-right: 18px;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  color: #262626;
+  i {
+    color: #00b533;
+  }
+}
+
+.down {
+  margin-top: 80px;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00b533;
+  height: 5px;
+}

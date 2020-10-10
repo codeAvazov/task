@@ -1,0 +1,62 @@
+.info {
+  border-left: 2px solid #f8f8f8;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 26px;
+
+  &_logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #72d58d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    padding: 9px;
+  }
+
+  &_name {
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    padding-top: 5px;
+  }
+
+  &_icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    text-align: center;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 8px;
+    }
+
+    &_icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #f8f8f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    &_label {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+    }
+  }
+}
