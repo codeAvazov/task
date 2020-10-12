@@ -29,6 +29,7 @@
 
       @media screen and (max-width: 760px) {
         border-right: 2px solid #f8f8f8;
+        padding: 0;
       }
 
       div {
@@ -41,6 +42,14 @@
         &:first-child {
           border-right: 1px solid #f8f8f8;
           justify-content: flex-start;
+
+          @media screen and (max-width: 450px) {
+            justify-content: center;
+          }
+        }
+
+        @media screen and (max-width: 450px) {
+          justify-content: center;
         }
       }
     }

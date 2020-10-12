@@ -29,7 +29,7 @@ export const Range = () => {
   return (
     <div className="row m-0 p-0 py-2 border-bottom mx-1">
       <div
-        className="col-5 p-0 my-2 px-3 border-right"
+        className="col-5 p-0 my-2 border-right"
         style={{ fontWeight: "500" }}
       >
         Murakkab animatsiya yaratish
@@ -40,13 +40,11 @@ export const Range = () => {
           <div>{range}%</div>
         </div>
         <div className="d-flex align-items-center justify-content-center">
-          <div>
+          <div className={cl(st.iconShadow)} style={{boxShadow : `0 0 15px ${icon.color+'70'}`}}>
             <i
               className={cl(st.icon, icon.icon)}
               style={{
                 color: icon.color,
-                fontSize: "18px",
-                verticalAlign : '-1px'
               }}
             />
           </div>

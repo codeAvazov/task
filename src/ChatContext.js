@@ -17,6 +17,36 @@ export const ChatContext = ({ children }) => {
     modul: "",
     dars: "",
   });
+  const [msg, setMsg] = useState([
+    {
+      title: "Shu vazifani korib bering",
+      task: "2-topshiriq",
+      size: "3.9 MB",
+      type: "file",
+      author: "user",
+      date:
+        new Date().toLocaleDateString() +
+        " / " +
+        new Date().getHours() +
+        ":" +
+        new Date().getMinutes(),
+    },
+    {
+      title: "Mana shu faylad toliq korsatilgan",
+      type: "file",
+      task: "2-topshiriq.javobi",
+      size: "5 MB",
+      author: "Mentor",
+      date:
+        new Date().toLocaleDateString() +
+        " / " +
+        new Date().getHours() +
+        ":" +
+        new Date().getMinutes(),
+    },
+  ]);
+
+  const [messageData, setMessageData] = useState("");
 
   useEffect(() => {
     Axios.get(api)
@@ -58,6 +88,10 @@ export const ChatContext = ({ children }) => {
         setOpenTask,
         taskHistory,
         setTaskHistory,
+        setMsg,
+        setMessageData,
+        messageData,
+        msg,
       }}
     >
       {children}

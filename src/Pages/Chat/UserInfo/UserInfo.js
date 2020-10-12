@@ -100,7 +100,7 @@ export const UserInfo = () => {
       </div>
       <div
         className="border border-bottom-0 mx-auto"
-        style={{ width: "85%", margin : '2rem 0' }}
+        style={{ width: "85%", margin : '1rem 0' }}
       ></div>
       <div className={cl(st.info_label, "p-3")}>
         <div className={cl(st.info_label_title)}>

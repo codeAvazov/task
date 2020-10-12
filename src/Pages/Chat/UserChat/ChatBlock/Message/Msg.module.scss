@@ -1,0 +1,39 @@
+.msg {
+  width: 70%;
+  border-radius: 15px;
+  border-bottom-left-radius: 0;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  margin: 20px 0;
+  position: relative;
+
+  &_file {
+    display: flex;
+    align-items: center;
+
+    &_icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #898989;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  &_date {
+    font-size: 12px;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+  }
+}
+
+.mentor {
+  margin-left: 30%;
+  border-bottom-right-radius: 0;
+  background-color: #fff9ef;
+}

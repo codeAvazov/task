@@ -1,5 +1,8 @@
 .chat {
   height: 100%;
   border-right: 1px solid #f8f8f8;
-}
 
+  @media screen and (min-width: 960px) and (max-width: 1250px) {
+    height: 110%;
+  }
+}

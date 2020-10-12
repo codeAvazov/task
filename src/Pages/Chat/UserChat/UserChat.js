@@ -4,6 +4,8 @@ import cl from "classnames";
 import { TaskList } from "./TaskList/TaskList";
 import { chatContext } from "../../../ChatContext";
 import { Range } from "./Range/Range";
+import { ChatBlock } from "./ChatBlock/ChatBlock";
+import { ChatData } from "./ChatData/ChatData";
 export const UserChat = () => {
   const { users } = useContext(chatContext);
 
@@ -14,11 +16,21 @@ export const UserChat = () => {
       <div>
         <TaskList />
       </div>
-      <div>
-        <Range />
-      </div>
-      <div>
-        
+      <div className="px-3" style={{ height: "85%" }}>
+        <div>
+          <Range />
+        </div>
+        <div style={{ height: "75%" }}>
+          <ChatBlock />
+        </div>
+        <div
+          style={{
+            height: "8%",
+            marginTop : '1%',
+          }}
+        >
+          <ChatData />
+        </div>
       </div>
     </div>
   );

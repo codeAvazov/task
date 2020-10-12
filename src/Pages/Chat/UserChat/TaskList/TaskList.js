@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import st from './TaskList.module.scss';
-import cl from 'classnames';
+import st from "./TaskList.module.scss";
+import cl from "classnames";
 
 export const TaskList = () => {
   const [marks, setMarks] = useState([
@@ -76,23 +76,22 @@ export const TaskList = () => {
             );
         })}
         <div className={cl(st.chat_taskList_btns)}>
-          <div>
-            {console.log(showTask)}
+          <div onClick={decShowTask}>
             <i
               class="fas fa-angle-left"
               style={
                 showTask[0] === 1 ? { color: "#fcfcfc" } : { color: "#000" }
               }
-              onClick={decShowTask}
             />
           </div>
-          <div>
+          <div onClick={incrShowTask}>
             <i
               class="fas fa-angle-right"
               style={
-                showTask[4] === marks.length ? { color: "#FCFCFC" } : {color : '#000'}
+                showTask[4] === marks.length
+                  ? { color: "#FCFCFC" }
+                  : { color: "#000" }
               }
-              onClick={incrShowTask}
             ></i>
           </div>
         </div>

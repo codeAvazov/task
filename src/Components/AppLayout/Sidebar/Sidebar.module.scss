@@ -36,6 +36,10 @@
     font-size: 14px;
   }
 
+  @media screen and (max-width: 450px) {
+    width: 70%;
+  }
+
   &.open {
     @media screen and (max-width: 760px) {
       left: 0;
