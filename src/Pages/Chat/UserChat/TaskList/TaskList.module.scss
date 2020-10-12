@@ -1,0 +1,48 @@
+.chat {
+  width: 100%;
+
+  &_taskList {
+    display: flex;
+
+    &_task {
+      width: 16%;
+      border: 1px solid #f8f8f8;
+      border-top: none;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      opacity: 0.3;
+      cursor: pointer;
+    }
+
+    &_btns {
+      width: 20%;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #f8f8f8;
+      border-top: none;
+      padding: 11px 16px;
+
+      @media screen and (max-width: 760px) {
+        border-right: 2px solid #f8f8f8;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        justify-content: flex-end;
+        height: 70px;
+        cursor: pointer;
+        &:first-child {
+          border-right: 1px solid #f8f8f8;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}

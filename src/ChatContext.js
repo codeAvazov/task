@@ -10,6 +10,13 @@ export const ChatContext = ({ children }) => {
   const [select, setSelect] = useState(true);
   const [querySearch, setQuerySearch] = useState("");
   const [currentUser, setCurrentUser] = useState(0);
+  const [openCourse, setOpenCourse] = useState(false);
+  const [openTask, setOpenTask] = useState(false);
+  const [taskHistory, setTaskHistory] = useState({
+    kurs: "",
+    modul: "",
+    dars: "",
+  });
 
   useEffect(() => {
     Axios.get(api)
@@ -45,6 +52,12 @@ export const ChatContext = ({ children }) => {
         setQuerySearch,
         currentUser,
         setCurrentUser,
+        openCourse,
+        setOpenCourse,
+        openTask,
+        setOpenTask,
+        taskHistory,
+        setTaskHistory,
       }}
     >
       {children}

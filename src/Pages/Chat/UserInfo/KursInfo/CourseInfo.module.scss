@@ -1,0 +1,34 @@
+.course {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding: 1rem;
+  padding-left: 40px;
+  box-shadow: 0 0 32px 0 #dedede50;
+  max-width: 300px;
+  width: 280px;
+
+  &_item {
+    font-size: 14px;
+    font-style: normal;
+    margin: 10px 0;
+    position: relative;
+
+    &:first-child {
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 20px;   
+    }
+
+    &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #00B533;
+        position: absolute;
+        top: 7px;
+        left: -20px;
+    }
+  }
+}

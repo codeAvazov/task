@@ -9,7 +9,6 @@ export const Users = () => {
     chatContext
   );
 
-
   return (
     <div className={cl(st.listMenu)}>
       <div className={cl(st.listMenu_top)}>
@@ -24,7 +23,7 @@ export const Users = () => {
             className={!select && cl(st.active)}
             onClick={() => setSelect(false)}
           >
-            Chat<span class="badge badge-danger">{users.length-5}</span>
+            Chat<span class="badge badge-danger">{users.length - 5}</span>
           </div>
         </div>
         <div className={cl(st.listMenu_top_search)}>
@@ -43,11 +42,15 @@ export const Users = () => {
           </div>
         </div>
       </div>
-      <ul className={cl(st.listMenu_users)}>
-        {users.length && users.map((user, i) => (
-          <User key={i} user={user} id={i} />
-        ))}
-      </ul>
+      {users.length ? (
+        <ul className={cl(st.listMenu_users)}>
+          {users.map((user, i) => (
+            <User key={i} user={user} id={i} />
+          ))}
+        </ul>
+      ) : (
+        <h2 className="text-danger">No users</h2>
+      )}
     </div>
   );
 };

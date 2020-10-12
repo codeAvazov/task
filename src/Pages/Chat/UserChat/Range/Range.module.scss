@@ -1,0 +1,26 @@
+.range {
+  -webkit-appearance: none;
+  width: 150px;
+  border-radius: 1rem;
+  height: 10px;
+  cursor: pointer;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ececec;
+    position: relative;
+
+  }
+}
+.rating {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 7px;
+}

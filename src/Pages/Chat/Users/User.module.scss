@@ -2,13 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0px 16px 5px 11px;
   border-bottom: 2px solid #f8f8f8;
+  padding: 0px 10px 10px 10px;
   cursor: pointer;
 
+  @media screen and (max-width : 760px){
+    justify-content: space-evenly;
+  }
+
   &_logo {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: #72d58d;
     color: #fff;
@@ -16,7 +20,8 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    padding: 9px;
+    padding: 10px;
+    margin-right: 5px;
   }
 
   &_data {
@@ -24,39 +29,52 @@
     font-weight: 400;
     font-style: normal;
     padding-top: 12px;
-    padding-left: 12px;
+    padding-left: 5px;
     color: #0003;
-    @media screen and (max-width : 760px){
-        padding: 0;
+    @media screen and (max-width: 760px) {
+      padding: 0;
     }
 
     &_name {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
       color: #000;
     }
   }
 
   &_date {
+    display: flex;
+    flex-direction: column;
     color: #0004;
     padding-left: 12px;
-    padding-top: 15px;
+    height: 100%;
+    margin-top: 15px;
     div {
-        margin: 5px 0;
+      font-size: 12px;
+      margin: 3px 0;
+      &:last-child {
+        padding-top: 12px;
+      }
     }
     span {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      margin-top: 10px;
-      margin-left: 10px;
+      margin-left: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    @media screen and (max-width : 760px){
-        padding: 0;
+    @media screen and (max-width: 760px) {
+      div {
+        margin: 0;
+      }
 
-        span {
-            margin: 0;
-        }
+      span {
+        margin: 0;
+        margin-bottom: 15px;
+        padding: 0;
+      }
     }
   }
 }
@@ -73,10 +91,10 @@
 
   .user_date {
     color: #fff;
-    
+
     span {
-        background-color: #fff;
-        color: #00b533;
+      background-color: #fff;
+      color: #00b533;
     }
   }
 }

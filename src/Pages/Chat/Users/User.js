@@ -17,7 +17,7 @@ export const User = ({ user, id }) => {
         <div className={cl(st.user_data_name)}>
           {user.name.first} {user.name.last}
         </div>
-        <div>Salom meni vazifamni tekshirib bering ustoz</div>
+        <div>Salom meni vazifamni...</div>
       </div>
       <div className={cl(st.user_date)}>
         <div>{new Date().getHours() + ":" + new Date().getMinutes()}</div>
