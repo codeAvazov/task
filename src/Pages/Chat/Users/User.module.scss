@@ -5,6 +5,9 @@
   border-bottom: 2px solid #f8f8f8;
   padding: 0px 10px 10px 10px;
   cursor: pointer;
+  &:last-child {
+    border: none;
+  }
 
   @media screen and (max-width : 760px){
     justify-content: space-evenly;

@@ -8,13 +8,21 @@
       width: 16%;
       border: 1px solid #f8f8f8;
       border-top: none;
-      padding: 12px 24px;
+      padding: 14px 24px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       opacity: 0.3;
       cursor: pointer;
+
+      &:first-child {
+        border-left-color: transparent;
+      }
+
+      &:last-child {
+        border-right-color: transparent;
+      }
     }
 
     &_btns {

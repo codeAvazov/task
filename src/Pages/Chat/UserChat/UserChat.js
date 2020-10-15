@@ -6,29 +6,32 @@ import { chatContext } from "../../../ChatContext";
 import { Range } from "./Range/Range";
 import { ChatBlock } from "./ChatBlock/ChatBlock";
 import { ChatData } from "./ChatData/ChatData";
-export const UserChat = () => {
+
+export const UserChat = ({ size, handleHide }) => {
   const { users } = useContext(chatContext);
 
   if (!users.length) return null;
 
+  const onHandleHide = () => {
+    if (window.innerWidth < 992) handleHide();
+  };
+
   return (
-    <div className={cl(st.chat)}>
-      <div>
+    <div className={cl(st.chat, size < 992 && st.mobile)}>
+      <div className={cl(st.chat_back)} onClick={onHandleHide}>
+        <i className="fas fa-arrow-left" />
+      </div>
+      <div style={{ height: "16%" }}>
         <TaskList />
       </div>
-      <div className="px-3" style={{ height: "85%" }}>
-        <div>
+      <div className="px-3" style={{ height: "84%" }}>
+        <div style={{ height: "20%" }}>
           <Range />
         </div>
-        <div style={{ height: "75%" }}>
+        <div style={{ height: "70%" }}>
           <ChatBlock />
         </div>
-        <div
-          style={{
-            height: "8%",
-            marginTop : '1%',
-          }}
-        >
+        <div className={cl(st.chat_data)}>
           <ChatData />
         </div>
       </div>

@@ -6,7 +6,6 @@ import { Msg } from "./Message/Msg";
 
 export const ChatBlock = () => {
   const { msg } = useContext(chatContext);
-  console.log(msg);
 
   return (
     <div className={cl(st.block)}>

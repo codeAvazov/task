@@ -5,7 +5,7 @@ import { chatContext } from "../../../ChatContext";
 import { CourseInfo } from "./KursInfo/CourseInfo";
 import { TaskHistory } from "./TaskHistory/TaskHistory";
 
-export const UserInfo = () => {
+export const UserInfo = ({ size, handleShow, handleHide }) => {
   const {
     currentUser,
     users,
@@ -21,15 +21,31 @@ export const UserInfo = () => {
   let user = users[currentUser];
   let fullName = user.name.first + " " + user.name.last;
 
+  const onHandleShow = () => {
+    if (window.innerWidth < 992) handleShow();
+    setOpenCourse(false);
+    setOpenTask(false);
+  };
+
+  const onHandleHide = () => {
+    if (window.innerWidth < 992) handleHide();
+  };
+
   return (
-    <div className={cl(st.info)}>
+    <div className={cl(st.info, size < 992 && st.mobile)}>
+      <div className={cl(st.info_back)} onClick={onHandleHide}>
+        <i className="fas fa-arrow-left" />
+      </div>
       <div className={cl(st.info_logo)}>
         {user.name.first[0] + user.name.last[0].toUpperCase()}
       </div>
       <div className={cl(st.info_name)}>{fullName}</div>
       <div className={cl(st.info_icons)}>
         <div>
-          <div className={cl(st.info_icons_icon)}>
+          <div
+            className={cl(st.info_icons_icon)}
+            onClick={() => onHandleShow()}
+          >
             <i className="far fa-comment-alt"></i>
           </div>
           <div className={cl(st.info_icons_label)}>Chatga o`tish</div>
@@ -69,7 +85,7 @@ export const UserInfo = () => {
           )}
         </div>
       </div>
-      <div className={cl(st.info_stars, 'mb-3')}>
+      <div className={cl(st.info_stars, "mb-3")}>
         {icon.map((star, i) => (
           <div
             className={cl(st.info_stars_star, mark > i && "text-warning")}
@@ -100,7 +116,7 @@ export const UserInfo = () => {
       </div>
       <div
         className="border border-bottom-0 mx-auto"
-        style={{ width: "85%", margin : '1rem 0' }}
+        style={{ width: "85%", margin: "1rem 0" }}
       ></div>
       <div className={cl(st.info_label, "p-3")}>
         <div className={cl(st.info_label_title)}>

@@ -4,7 +4,7 @@ import cl from "classnames";
 import { chatContext } from "../../../ChatContext";
 import { User } from "./User";
 
-export const Users = () => {
+export const Users = ({ handleShow }) => {
   const { users, select, setSelect, querySearch, setQuerySearch } = useContext(
     chatContext
   );
@@ -45,7 +45,7 @@ export const Users = () => {
       {users.length ? (
         <ul className={cl(st.listMenu_users)}>
           {users.map((user, i) => (
-            <User key={i} user={user} id={i} />
+            <User key={i} user={user} id={i} handleShow={handleShow}/>
           ))}
         </ul>
       ) : (

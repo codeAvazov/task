@@ -3,7 +3,7 @@ import st from "./Range.module.scss";
 import cl from "classnames";
 
 export const Range = () => {
-  const [range, setRange] = useState(0);
+  const [range, setRange] = useState(53);
   const icons = [
     { icon: "fas fa-frown", color: "#DE1E3A", interval: [0, 13] },
     { icon: "fas fa-meh", color: "#FFB436", interval: [14, 53] },
