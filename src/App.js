@@ -10,13 +10,11 @@ function App() {
   return (
     <ChatContext>
       <AppLayout>
-        <div className="layout">
-          <Switch>
-            <Route exact path="/taskandchat" component={Chat} />
-            <Route exact path="/component" component={Component} />
-            <Redirect from="/*" to="/component" />
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/taskandchat" component={Chat} />
+          <Route exact path="/component" component={Component} />
+          <Redirect from="/*" to="/component" />
+        </Switch>
       </AppLayout>
     </ChatContext>
   );

@@ -17,6 +17,8 @@ export const ChatContext = ({ children }) => {
     modul: "",
     dars: "",
   });
+  const [messageData, setMessageData] = useState("");
+
   const [msg, setMsg] = useState([
     {
       title: "Shu vazifani korib bering",
@@ -46,7 +48,6 @@ export const ChatContext = ({ children }) => {
     },
   ]);
 
-  const [messageData, setMessageData] = useState("");
 
   useEffect(() => {
     Axios.get(api)

@@ -4,6 +4,9 @@ import cl from "classnames";
 import { NavLink } from "react-router-dom";
 
 export const Sidebar = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
   const data = [
     { title: "Dashboard", icon: "far fa-chart-bar", to: "/dashboard" },
     { title: "Barcha Kurslar", icon: "fas fa-layer-group", to: "/allcourses" },
@@ -19,7 +22,6 @@ export const Sidebar = () => {
     { title: "Chiqish", icon: "fas fa-power-off", to: "/exit" },
   ];
 
-  const [isOpen, setIsOpen] = useState(false);
   
   window.addEventListener('resize', () => {
     setIsOpen(false);
