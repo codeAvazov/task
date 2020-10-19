@@ -3,7 +3,6 @@ import "./App.scss";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { AppLayout } from "./Components/AppLayout/AppLayout";
 import { Chat } from "./Pages/Chat/Chat";
-import { Component } from "./Pages/Component";
 import { ChatContext } from "./ChatContext";
 
 function App() {
@@ -12,8 +11,7 @@ function App() {
       <AppLayout>
         <Switch>
           <Route exact path="/taskandchat" component={Chat} />
-          <Route exact path="/component" component={Component} />
-          <Redirect from="/*" to="/component" />
+          <Redirect from="*" to="/taskandchat" />
         </Switch>
       </AppLayout>
     </ChatContext>
