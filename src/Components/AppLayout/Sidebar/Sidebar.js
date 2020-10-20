@@ -18,7 +18,7 @@ export const Sidebar = () => {
     { title: "Qurilmalar", icon: "fas fa-laptop-house", to: "/devises" },
     { title: "Zoom va Chat", icon: "fas fa-video", to: "/zoom" },
     { title: "Sozlamalar", icon: "fas fa-cog", to: "/settings" },
-    { title: "Home.pdp.uz", icon: "fas fa-arrow-up", to: "/home", down: true },
+    { title: "Home.pdp.uz", icon: "fas fa-arrow-up", to: "/home"},
     { title: "Chiqish", icon: "fas fa-power-off", to: "/exit" },
   ];
 
@@ -48,7 +48,7 @@ export const Sidebar = () => {
           {data.map((menu, i) => (
             <li
               key={i}
-              className={cl(st.sidebar_menu_item, menu.down && st.down)}
+              className={cl(st.sidebar_menu_item)}
             >
               <NavLink
                 to={menu.to}

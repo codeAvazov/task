@@ -21,11 +21,10 @@
     cursor: pointer;
     display: none;
 
-    @media screen and (max-width : 992px){
+    @media screen and (max-width: 992px) {
       display: flex;
     }
   }
-
 
   &_logo {
     width: 50px;

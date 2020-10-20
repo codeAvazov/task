@@ -37,6 +37,7 @@
   }
 
   @media screen and (max-width: 995px) {
+    padding-left: 38px;
     font-size: 14px;
     overflow-x: hidden;
   }
@@ -127,12 +128,6 @@
   }
 }
 
-.down {
-  margin-top: 70px;
-  @media screen and (max-width : 760px){
-    margin-top: 120px;
-  }
-}
 
 ::-webkit-scrollbar {
   width: 2px;
@@ -140,6 +135,5 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #00b533;
-  height: 5px;
+  background-color: #898989;
 }

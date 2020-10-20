@@ -27,7 +27,7 @@ export const Range = () => {
   }, [range]);
 
   return (
-    <div className="row m-0 p-0 py-2 border-bottom mx-1">
+    <div className="row m-0 p-0 py-2 border-bottom">
       <div
         className="col-5 p-0 my-2 border-right"
         style={{ fontWeight: "500" }}

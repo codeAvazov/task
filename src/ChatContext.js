@@ -1,11 +1,15 @@
 import Axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
+import { Msg } from "./Service/Messages";
 
+// API_URL
 const api = "https://randomuser.me/api/?results=50";
 
+// Context API
 export const chatContext = createContext();
 
 export const ChatContext = ({ children }) => {
+  // State
   const [users, setUsers] = useState([]);
   const [select, setSelect] = useState(true);
   const [querySearch, setQuerySearch] = useState("");
@@ -18,37 +22,9 @@ export const ChatContext = ({ children }) => {
     dars: "",
   });
   const [messageData, setMessageData] = useState("");
+  const [msg, setMsg] = useState(Msg());
 
-  const [msg, setMsg] = useState([
-    {
-      title: "Shu vazifani korib bering",
-      task: "2-topshiriq",
-      size: "3.9 MB",
-      type: "file",
-      author: "user",
-      date:
-        new Date().toLocaleDateString() +
-        " / " +
-        new Date().getHours() +
-        ":" +
-        new Date().getMinutes(),
-    },
-    {
-      title: "Mana shu faylad toliq korsatilgan",
-      type: "file",
-      task: "2-topshiriq.javobi",
-      size: "5 MB",
-      author: "Mentor",
-      date:
-        new Date().toLocaleDateString() +
-        " / " +
-        new Date().getHours() +
-        ":" +
-        new Date().getMinutes(),
-    },
-  ]);
-
-
+  // getUser request
   useEffect(() => {
     Axios.get(api)
       .then((res) => {
@@ -57,6 +33,7 @@ export const ChatContext = ({ children }) => {
       .catch((e) => console.log(e));
   }, []);
 
+  // Search user 
   useEffect(() => {
     searchUser();
   }, [querySearch]);

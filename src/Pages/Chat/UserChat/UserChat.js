@@ -21,10 +21,10 @@ export const UserChat = ({ size, handleHide }) => {
       <div className={cl(st.chat_back)} onClick={onHandleHide}>
         <i className="fas fa-arrow-left" />
       </div>
-      <div style={{ height: "16%" }}>
+      <div style={{ height: "auto"}}>
         <TaskList />
       </div>
-      <div className="px-3" style={{ height: "84%" }}>
+      <div className="px-3" style={{ height: "86%" }}>
         <div style={{ height: "20%" }}>
           <Range />
         </div>
